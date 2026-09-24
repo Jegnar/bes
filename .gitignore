@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Production builds
+dist/
+
+# Local environment variables
+.env
+.env.*
+!.env.example
+
+# Logs and editor files
+*.log
+.DS_Store
+.vscode/
+
+# Manual deployment packages
+bes-cloudflare*.zip
