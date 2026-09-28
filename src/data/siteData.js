@@ -16,9 +16,9 @@ export const stats = [
 ];
 
 export const services = [
-  { icon: Home, title: 'Solar residencial', text: 'Convierte tu techo en una fuente de ahorro y protege tu hogar de las tarifas eléctricas.' },
-  { icon: Building2, title: 'Solar comercial', text: 'Soluciones escalables para reducir costos operativos y fortalecer el valor de tu negocio.' },
-  { icon: Factory, title: 'Proyectos industriales', text: 'Ingeniería de alto desempeño diseñada para cubrir grandes demandas de energía.' },
+  { icon: Home, number: '01', title: 'Solar residencial', text: 'Convierte tu techo en una fuente de ahorro y protege tu hogar de las tarifas eléctricas.', features: ['Diseño a tu consumo', 'Monitoreo desde tu celular'] },
+  { icon: Building2, number: '02', title: 'Solar comercial', text: 'Soluciones escalables para reducir costos operativos y fortalecer el valor de tu negocio.', features: ['Retorno de inversión', 'Sistemas escalables'] },
+  { icon: Factory, number: '03', title: 'Proyectos industriales', text: 'Ingeniería de alto desempeño diseñada para cubrir grandes demandas de energía.', features: ['Ingeniería especializada', 'Gestión integral del proyecto'] },
 ];
 
 export const benefits = [
@@ -33,6 +33,14 @@ export const processSteps = [
   { number: '02', title: 'Diseño', text: 'Creamos una propuesta a la medida de tu espacio y consumo.' },
   { number: '03', title: 'Instalación', text: 'Nuestro equipo certificado instala y pone en marcha el sistema.' },
   { number: '04', title: 'Monitoreo', text: 'Supervisas tu producción y ahorro desde cualquier dispositivo.' },
+];
+
+export const faqs = [
+  { question: '¿Cuánto puedo ahorrar con paneles solares?', answer: 'Depende de tu consumo, tarifa, espacio disponible y ubicación. Con tu recibo eléctrico podemos preparar una estimación personalizada y dimensionar el sistema adecuado.' },
+  { question: '¿Qué información necesitan para cotizar?', answer: 'Para una primera evaluación necesitamos una fotografía o archivo de tu recibo de luz, la ubicación del inmueble y saber si el proyecto es residencial, comercial o industrial.' },
+  { question: '¿Los paneles funcionan en días nublados?', answer: 'Sí. Los paneles continúan produciendo energía con radiación indirecta, aunque su generación es menor que en un día completamente soleado.' },
+  { question: '¿Qué mantenimiento requiere el sistema?', answer: 'El mantenimiento es relativamente bajo. Recomendamos limpieza periódica, revisión visual y monitoreo del desempeño para detectar cualquier variación.' },
+  { question: '¿Cuánto dura una instalación solar?', answer: 'Los paneles suelen diseñarse para operar durante décadas. La vida útil y las garantías específicas dependen de los equipos seleccionados para cada proyecto.' },
 ];
 
 export const companyValues = [

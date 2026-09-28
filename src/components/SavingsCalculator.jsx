@@ -1,0 +1,44 @@
+import { ArrowRight, Calculator, Info, Zap } from 'lucide-react';
+import { useMemo, useState } from 'react';
+
+const formatCurrency = (value) => new Intl.NumberFormat('es-MX', {
+  style: 'currency', currency: 'MXN', maximumFractionDigits: 0,
+}).format(value);
+
+export default function SavingsCalculator() {
+  const [bill, setBill] = useState(3000);
+  const [coverage, setCoverage] = useState(80);
+
+  const estimate = useMemo(() => {
+    const annualBill = bill * 6;
+    const annualSavings = annualBill * (coverage / 100);
+    return { annualSavings, longTerm: annualSavings * 25 };
+  }, [bill, coverage]);
+
+  return (
+    <section className="section calculator" id="calculadora">
+      <div className="container calculator__grid">
+        <div className="calculator__intro">
+          <span className="eyebrow">Calcula tu potencial</span>
+          <h2>Descubre lo que tu recibo podría convertirse en ahorro.</h2>
+          <p>Ajusta los valores para obtener una referencia inicial. El cálculo definitivo se realiza con tu historial de consumo y las condiciones de tu inmueble.</p>
+          <div className="calculator__note"><Info /><span>Estimación informativa. No representa una cotización ni garantía de ahorro.</span></div>
+        </div>
+        <div className="calculator__panel">
+          <div className="calculator__heading"><span><Calculator /> Estimador BES</span><small>Recibo bimestral</small></div>
+          <label htmlFor="bill">¿Cuánto pagas de luz?</label>
+          <output>{formatCurrency(bill)}</output>
+          <input id="bill" type="range" min="500" max="30000" step="500" value={bill} onChange={(event) => setBill(Number(event.target.value))} style={{ '--range-progress': `${((bill - 500) / 29500) * 100}%` }} />
+          <div className="calculator__range"><span>$500</span><span>$30,000+</span></div>
+          <label htmlFor="coverage">Cobertura estimada del consumo</label>
+          <div className="calculator__coverage"><input id="coverage" type="range" min="50" max="100" step="5" value={coverage} onChange={(event) => setCoverage(Number(event.target.value))} style={{ '--range-progress': `${(coverage - 50) * 2}%` }} /><strong>{coverage}%</strong></div>
+          <div className="calculator__results">
+            <div><span>Ahorro anual estimado</span><strong>{formatCurrency(estimate.annualSavings)}</strong></div>
+            <div className="calculator__featured"><span><Zap /> Potencial a 25 años</span><strong>{formatCurrency(estimate.longTerm)}</strong></div>
+          </div>
+          <a className="button button--full" href="#contacto">Solicitar cálculo preciso <ArrowRight size={18} /></a>
+        </div>
+      </div>
+    </section>
+  );
+}

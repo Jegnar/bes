@@ -9,6 +9,9 @@
   .benefits__grid, .process__grid { grid-template-columns: 1fr 1fr; }
   .process__grid::before { display: none; }
   .contact__grid { grid-template-columns: 1fr; gap: 50px; }
+  .calculator__grid, .faq__grid { grid-template-columns: 1fr; gap: 45px; }
+  .faq__grid .section-heading { position: static; }
+  .hero__energy-card { display: none; }
   .project-feature { min-height: 620px; }
   .footer__top { grid-template-columns: 2fr 1fr 1fr; }
   .footer__top > div:last-child { grid-column: 2; }
@@ -30,6 +33,9 @@
   .about__visual { width: calc(100% - 15px); }
   .about__badge { right: -15px; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
+  .calculator__panel { padding: 25px 20px; }
+  .calculator__results { grid-template-columns: 1fr; }
+  .about__proof { grid-template-columns: 1fr 1fr 1fr; }
   .contact-form { min-height: auto; padding: 25px 20px; }
   .footer__top { grid-template-columns: 1fr 1fr; }
   .footer__top > div:first-child { grid-column: 1 / -1; }

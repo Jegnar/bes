@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeCheck } from 'lucide-react';
+import { ArrowRight, BadgeCheck, MapPin, ShieldCheck, Sun } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -12,6 +12,15 @@ export default function Hero() {
           <a className="button" href="#contacto">Obtén tu cotización <ArrowRight size={18} /></a>
           <a className="button button--ghost" href="#soluciones">Conoce las soluciones</a>
         </div>
+        <div className="hero__trust">
+          <span><ShieldCheck /> Evaluación personalizada</span>
+          <span><MapPin /> Proyectos en México</span>
+        </div>
+      </div>
+      <div className="hero__energy-card" aria-hidden="true">
+        <span className="hero__energy-icon"><Sun /></span>
+        <div><small>Energía limpia</small><strong>Hecha para durar</strong></div>
+        <i />
       </div>
       <a className="hero__scroll" href="#impacto" aria-label="Desplazarse a la siguiente sección"><span /> Descubre más</a>
     </section>

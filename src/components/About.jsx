@@ -18,6 +18,11 @@ export default function About() {
             <li><Check /> Instalación profesional y componentes certificados</li>
             <li><Check /> Gestión y acompañamiento durante todo el proyecto</li>
           </ul>
+          <div className="about__proof">
+            <div><strong>01</strong><span>Analizamos</span></div>
+            <div><strong>02</strong><span>Diseñamos</span></div>
+            <div><strong>03</strong><span>Instalamos</span></div>
+          </div>
           <a className="text-link" href="#contacto">Hablemos de tu proyecto <span>→</span></a>
         </div>
       </div>

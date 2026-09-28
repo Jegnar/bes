@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Clock3, MapPin, ShieldCheck } from 'lucide-react';
 import { useState } from 'react';
 import { validateContactForm } from '../utils/formValidation';
 
@@ -25,16 +25,19 @@ export default function Contact() {
           <p>Cuéntanos sobre tu proyecto. Nuestro equipo preparará una evaluación inicial sin costo y se pondrá en contacto contigo.</p>
           <div className="contact__details">
             <span><MapPin /> México</span>
+            <span><Clock3 /> Atención personalizada</span>
+            <span><ShieldCheck /> Tus datos se mantienen protegidos</span>
           </div>
         </div>
         <form className="contact-form" onSubmit={submit} noValidate>
           {sent ? (
             <div className="form-success"><CheckCircle2 /><h3>¡Gracias, {values.name}!</h3><p>Recibimos tus datos. En la versión final conectaremos este formulario con tu correo o CRM.</p><button type="button" className="text-link" onClick={() => { setSent(false); setValues(initialValues); }}>Enviar otra solicitud</button></div>
           ) : <>
-            <div className="field"><label htmlFor="name">Nombre completo</label><input id="name" name="name" value={values.name} onChange={update} placeholder="Tu nombre" />{errors.name && <small>{errors.name}</small>}</div>
+            <div className="contact-form__title"><span>Solicita tu evaluación</span><small>Completa tus datos y cuéntanos qué necesitas.</small></div>
+            <div className="field"><label htmlFor="name">Nombre completo</label><input id="name" name="name" value={values.name} onChange={update} placeholder="Tu nombre" autoComplete="name" />{errors.name && <small>{errors.name}</small>}</div>
             <div className="field-row">
-              <div className="field"><label htmlFor="email">Correo electrónico</label><input id="email" name="email" type="email" value={values.email} onChange={update} placeholder="nombre@correo.com" />{errors.email && <small>{errors.email}</small>}</div>
-              <div className="field"><label htmlFor="phone">Teléfono</label><input id="phone" name="phone" value={values.phone} onChange={update} placeholder="+52 000 000 0000" />{errors.phone && <small>{errors.phone}</small>}</div>
+              <div className="field"><label htmlFor="email">Correo electrónico</label><input id="email" name="email" type="email" value={values.email} onChange={update} placeholder="nombre@correo.com" autoComplete="email" />{errors.email && <small>{errors.email}</small>}</div>
+              <div className="field"><label htmlFor="phone">Teléfono</label><input id="phone" name="phone" inputMode="tel" value={values.phone} onChange={update} placeholder="+52 000 000 0000" autoComplete="tel" />{errors.phone && <small>{errors.phone}</small>}</div>
             </div>
             <div className="field"><label htmlFor="project">Tipo de proyecto</label><select id="project" name="project" value={values.project} onChange={update}><option>Residencial</option><option>Comercial</option><option>Industrial</option></select></div>
             <div className="field"><label htmlFor="message">Cuéntanos un poco más <span>(opcional)</span></label><textarea id="message" name="message" value={values.message} onChange={update} placeholder="Consumo aproximado, ubicación o cualquier detalle..." rows="3" /></div>
