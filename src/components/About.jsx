@@ -11,11 +11,11 @@ export default function About() {
           <div className="about__badge"><strong>360°</strong><span>Ingeniería, instalación<br />y acompañamiento</span></div>
         </div>
         <div className="about__copy">
-          <SectionHeading eyebrow="Más que paneles" title="Construimos un futuro energético más inteligente" />
-          <p>En Beyond Electricity Solutions creemos que la energía debe darte libertad. Combinamos ingeniería, tecnología y un servicio cercano para entregar sistemas que funcionan hoy y siguen generando valor mañana.</p>
+          <SectionHeading eyebrow="Más allá de la electricidad" title="Una visión integral para instalaciones que deben rendir" />
+          <p>En Beyond Electricity Solutions combinamos ingeniería, tecnología y servicio cercano para resolver proyectos fotovoltaicos, de refrigeración y eléctricos con una misma exigencia de calidad.</p>
           <ul>
-            <li><Check /> Estudio personalizado de consumo y espacio</li>
-            <li><Check /> Instalación profesional y componentes certificados</li>
+            <li><Check /> Diagnóstico técnico según cada operación</li>
+            <li><Check /> Diseño e instalación profesional</li>
             <li><Check /> Gestión y acompañamiento durante todo el proyecto</li>
           </ul>
           <div className="about__proof">

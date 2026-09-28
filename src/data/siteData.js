@@ -1,4 +1,4 @@
-import { Building2, Factory, Headphones, Home, Leaf, ShieldCheck, Sun, Zap } from 'lucide-react';
+import { CircuitBoard, Factory, Gauge, Headphones, Leaf, ShieldCheck, Snowflake, Sun, ThermometerSnowflake, Wrench, Zap } from 'lucide-react';
 
 export const navigation = [
   { label: 'Inicio', href: '#inicio' },
@@ -15,32 +15,62 @@ export const stats = [
   { value: '24/7', label: 'Monitoreo inteligente' },
 ];
 
-export const services = [
-  { icon: Home, number: '01', title: 'Solar residencial', text: 'Convierte tu techo en una fuente de ahorro y protege tu hogar de las tarifas eléctricas.', features: ['Diseño a tu consumo', 'Monitoreo desde tu celular'] },
-  { icon: Building2, number: '02', title: 'Solar comercial', text: 'Soluciones escalables para reducir costos operativos y fortalecer el valor de tu negocio.', features: ['Retorno de inversión', 'Sistemas escalables'] },
-  { icon: Factory, number: '03', title: 'Proyectos industriales', text: 'Ingeniería de alto desempeño diseñada para cubrir grandes demandas de energía.', features: ['Ingeniería especializada', 'Gestión integral del proyecto'] },
+export const businessAreas = [
+  {
+    id: 'fotovoltaica', number: '01', icon: Sun, kicker: 'Energía fotovoltaica',
+    title: 'Generación solar diseñada para producir valor durante años.',
+    text: 'Convertimos superficies disponibles en activos energéticos. Analizamos tu consumo y desarrollamos sistemas fotovoltaicos residenciales, comerciales e industriales con una ejecución completa, de la ingeniería a la puesta en marcha.',
+    features: [
+      { icon: Gauge, title: 'Ingeniería a la medida', text: 'Dimensionamos el sistema con base en consumo, espacio y proyección.' },
+      { icon: Factory, title: 'Instalación integral', text: 'Coordinamos montaje, conexión y puesta en marcha profesional.' },
+      { icon: Zap, title: 'Desempeño visible', text: 'Monitorea la generación y conoce cómo trabaja tu inversión.' },
+    ],
+    tags: ['Residencial', 'Comercial', 'Industrial'],
+  },
+  {
+    id: 'refrigeracion', number: '02', icon: Snowflake, kicker: 'Refrigeración',
+    title: 'Control térmico que protege tu producto y tu operación.',
+    text: 'Diseñamos, instalamos y atendemos sistemas de refrigeración comercial e industrial orientados a mantener temperaturas estables, reducir interrupciones y aprovechar mejor la energía.',
+    features: [
+      { icon: ThermometerSnowflake, title: 'Solución térmica', text: 'Calculamos capacidad, condiciones de operación y distribución.' },
+      { icon: Wrench, title: 'Servicio especializado', text: 'Mantenimiento preventivo y correctivo para conservar continuidad.' },
+      { icon: Gauge, title: 'Eficiencia operativa', text: 'Revisamos desempeño y consumo para detectar oportunidades de mejora.' },
+    ],
+    tags: ['Comercial', 'Industrial', 'Mantenimiento'],
+  },
+  {
+    id: 'electrica', number: '03', icon: CircuitBoard, kicker: 'Ingeniería eléctrica',
+    title: 'Infraestructura eléctrica preparada para trabajar con seguridad.',
+    text: 'Diseñamos, ejecutamos y revisamos circuitos e instalaciones eléctricas con énfasis en orden, protección y capacidad. Una base confiable para que hogares, comercios e industria operen y crezcan.',
+    features: [
+      { icon: CircuitBoard, title: 'Circuitos y tableros', text: 'Distribución de cargas, canalización y organización profesional.' },
+      { icon: ShieldCheck, title: 'Protección y seguridad', text: 'Criterios de protección orientados a personas, equipos e instalación.' },
+      { icon: Wrench, title: 'Diagnóstico y servicio', text: 'Revisión, mantenimiento y corrección de fallas o puntos críticos.' },
+    ],
+    tags: ['Instalaciones', 'Tableros', 'Mantenimiento'],
+  },
 ];
 
 export const benefits = [
-  { icon: Zap, title: 'Ahorro desde el primer día', text: 'Reduce el recibo de luz con un sistema dimensionado para tu consumo real.' },
-  { icon: ShieldCheck, title: 'Tecnología confiable', text: 'Seleccionamos equipos certificados, resistentes y con garantías de largo plazo.' },
-  { icon: Leaf, title: 'Impacto positivo', text: 'Genera energía limpia y disminuye la huella de carbono de tu hogar o empresa.' },
-  { icon: Headphones, title: 'Acompañamiento total', text: 'Te guiamos desde el estudio inicial hasta el monitoreo de tu instalación.' },
+  { icon: Zap, title: 'Eficiencia con propósito', text: 'Cada solución parte del consumo, la capacidad y las condiciones reales de operación.' },
+  { icon: ShieldCheck, title: 'Ejecución responsable', text: 'Trabajamos con enfoque técnico, orden en sitio y atención a la seguridad.' },
+  { icon: Leaf, title: 'Valor a largo plazo', text: 'Buscamos soluciones duraderas que reduzcan desperdicios y costos operativos.' },
+  { icon: Headphones, title: 'Un equipo que responde', text: 'Te acompañamos desde el diagnóstico hasta la puesta en marcha y el servicio.' },
 ];
 
 export const processSteps = [
-  { number: '01', title: 'Diagnóstico', text: 'Analizamos tu recibo y tus necesidades de energía.' },
-  { number: '02', title: 'Diseño', text: 'Creamos una propuesta a la medida de tu espacio y consumo.' },
-  { number: '03', title: 'Instalación', text: 'Nuestro equipo certificado instala y pone en marcha el sistema.' },
-  { number: '04', title: 'Monitoreo', text: 'Supervisas tu producción y ahorro desde cualquier dispositivo.' },
+  { number: '01', title: 'Diagnóstico', text: 'Escuchamos la necesidad, revisamos las condiciones y definimos el alcance.' },
+  { number: '02', title: 'Ingeniería', text: 'Diseñamos una solución viable, clara y alineada con tu operación.' },
+  { number: '03', title: 'Ejecución', text: 'Coordinamos la instalación con orden, comunicación y atención al detalle.' },
+  { number: '04', title: 'Seguimiento', text: 'Verificamos el funcionamiento y permanecemos disponibles para servicio.' },
 ];
 
 export const faqs = [
-  { question: '¿Cuánto puedo ahorrar con paneles solares?', answer: 'Depende de tu consumo, tarifa, espacio disponible y ubicación. Con tu recibo eléctrico podemos preparar una estimación personalizada y dimensionar el sistema adecuado.' },
-  { question: '¿Qué información necesitan para cotizar?', answer: 'Para una primera evaluación necesitamos una fotografía o archivo de tu recibo de luz, la ubicación del inmueble y saber si el proyecto es residencial, comercial o industrial.' },
-  { question: '¿Los paneles funcionan en días nublados?', answer: 'Sí. Los paneles continúan produciendo energía con radiación indirecta, aunque su generación es menor que en un día completamente soleado.' },
-  { question: '¿Qué mantenimiento requiere el sistema?', answer: 'El mantenimiento es relativamente bajo. Recomendamos limpieza periódica, revisión visual y monitoreo del desempeño para detectar cualquier variación.' },
-  { question: '¿Cuánto dura una instalación solar?', answer: 'Los paneles suelen diseñarse para operar durante décadas. La vida útil y las garantías específicas dependen de los equipos seleccionados para cada proyecto.' },
+  { question: '¿Qué tipo de proyectos desarrolla BES?', answer: 'Atendemos proyectos fotovoltaicos, sistemas de refrigeración e instalaciones eléctricas para aplicaciones residenciales, comerciales e industriales.' },
+  { question: '¿Qué información necesitan para preparar una evaluación?', answer: 'Depende de la división. Podemos solicitar recibos de energía, ubicación, fotografías del sitio, capacidades de equipos, temperaturas requeridas o información de cargas eléctricas.' },
+  { question: '¿Trabajan proyectos integrales?', answer: 'Sí. Cuando el proyecto lo requiere podemos evaluar cómo interactúan la generación solar, la refrigeración y la infraestructura eléctrica para plantear una solución coordinada.' },
+  { question: '¿Ofrecen mantenimiento?', answer: 'Contemplamos mantenimiento y diagnóstico dentro de las áreas de refrigeración e instalaciones eléctricas, además del seguimiento al desempeño en sistemas fotovoltaicos.' },
+  { question: '¿Cómo comienza un proyecto?', answer: 'Comienza con una conversación y un diagnóstico inicial. A partir de la información disponible definimos el alcance, las visitas necesarias y el siguiente paso técnico.' },
 ];
 
 export const companyValues = [

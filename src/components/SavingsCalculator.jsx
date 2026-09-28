@@ -19,8 +19,8 @@ export default function SavingsCalculator() {
     <section className="section calculator" id="calculadora">
       <div className="container calculator__grid">
         <div className="calculator__intro">
-          <span className="eyebrow">Calcula tu potencial</span>
-          <h2>Descubre lo que tu recibo podría convertirse en ahorro.</h2>
+          <span className="eyebrow">Herramienta fotovoltaica</span>
+          <h2>Convierte tu recibo de luz en una referencia de ahorro.</h2>
           <p>Ajusta los valores para obtener una referencia inicial. El cálculo definitivo se realiza con tu historial de consumo y las condiciones de tu inmueble.</p>
           <div className="calculator__note"><Info /><span>Estimación informativa. No representa una cotización ni garantía de ahorro.</span></div>
         </div>

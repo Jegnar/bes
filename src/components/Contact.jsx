@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle2, Clock3, MapPin, ShieldCheck } from 'lucide-re
 import { useState } from 'react';
 import { validateContactForm } from '../utils/formValidation';
 
-const initialValues = { name: '', email: '', phone: '', project: 'Residencial', message: '' };
+const initialValues = { name: '', email: '', phone: '', project: 'Fotovoltaico', message: '' };
 
 export default function Contact() {
   const [values, setValues] = useState(initialValues);
@@ -21,8 +21,8 @@ export default function Contact() {
       <div className="container contact__grid">
         <div className="contact__intro">
           <span className="eyebrow eyebrow--light">Da el primer paso</span>
-          <h2>Descubre cuánto puedes ahorrar con energía solar.</h2>
-          <p>Cuéntanos sobre tu proyecto. Nuestro equipo preparará una evaluación inicial sin costo y se pondrá en contacto contigo.</p>
+          <h2>Conversemos sobre lo que tu proyecto necesita.</h2>
+          <p>Cuéntanos si buscas una solución fotovoltaica, de refrigeración o eléctrica. Revisaremos la información para orientar el siguiente paso.</p>
           <div className="contact__details">
             <span><MapPin /> México</span>
             <span><Clock3 /> Atención personalizada</span>
@@ -39,7 +39,7 @@ export default function Contact() {
               <div className="field"><label htmlFor="email">Correo electrónico</label><input id="email" name="email" type="email" value={values.email} onChange={update} placeholder="nombre@correo.com" autoComplete="email" />{errors.email && <small>{errors.email}</small>}</div>
               <div className="field"><label htmlFor="phone">Teléfono</label><input id="phone" name="phone" inputMode="tel" value={values.phone} onChange={update} placeholder="+52 000 000 0000" autoComplete="tel" />{errors.phone && <small>{errors.phone}</small>}</div>
             </div>
-            <div className="field"><label htmlFor="project">Tipo de proyecto</label><select id="project" name="project" value={values.project} onChange={update}><option>Residencial</option><option>Comercial</option><option>Industrial</option></select></div>
+            <div className="field"><label htmlFor="project">Área del proyecto</label><select id="project" name="project" value={values.project} onChange={update}><option>Fotovoltaico</option><option>Refrigeración</option><option>Instalación eléctrica</option><option>Proyecto integral</option></select></div>
             <div className="field"><label htmlFor="message">Cuéntanos un poco más <span>(opcional)</span></label><textarea id="message" name="message" value={values.message} onChange={update} placeholder="Consumo aproximado, ubicación o cualquier detalle..." rows="3" /></div>
             <button className="button button--full" type="submit">Solicitar evaluación <ArrowRight size={18} /></button>
             <p className="form-note">Al enviar aceptas nuestro aviso de privacidad.</p>

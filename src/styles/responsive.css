@@ -4,6 +4,15 @@
   .menu-button { display: block; }
   .hero { min-height: 720px; }
   .services__grid { grid-template-columns: 1fr; }
+  .service-section { grid-template-columns: 1fr; min-height: 0; }
+  .service-section--reverse .service-section__image { order: 0; }
+  .service-section__image, .service-section__image img { min-height: 420px; }
+  .solution-panel { grid-template-columns: 1fr; grid-template-areas: 'content' 'visual' 'features'; }
+  .solution-panel__content { min-height: auto; padding: 45px; }
+  .solution-panel__visual { min-height: 390px; }
+  .solution-panel__features { grid-template-columns: 1fr; }
+  .solution-panel__features > div { border-right: 0; border-bottom: 1px solid var(--line); }
+  .solution-panel__features > div:last-child { border-bottom: 0; }
   .about__grid { grid-template-columns: 1fr; gap: 60px; }
   .about__visual { width: 82%; }
   .benefits__grid, .process__grid { grid-template-columns: 1fr 1fr; }
@@ -25,6 +34,25 @@
   .project-feature__shade { background: rgba(3,8,9,.76); }
   .hero h1 { font-size: clamp(3.35rem, 17vw, 5rem); }
   .hero__actions { flex-direction: column; align-items: stretch; max-width: 370px; }
+  .solutions-tabs { grid-template-columns: 1fr; }
+  .service-sections { gap: 22px; }
+  .service-section { border-radius: 18px; }
+  .service-section__image, .service-section__image img { min-height: 280px; max-height: 310px; }
+  .service-section__content { padding: 30px 22px 32px; }
+  .service-section__content > h3 { font-size: clamp(1.85rem, 9vw, 2.45rem); }
+  .service-section__content > p { font-size: .94rem; }
+  .service-section__features > div { align-items: start; }
+  .service-section__footer { align-items: flex-start; flex-direction: column; }
+  .service-section__footer > a { min-height: 44px; align-items: center; }
+  .service-section__number { top: 16px; right: 20px; font-size: 2.5rem; }
+  .service-section__image-label { bottom: 18px; left: 20px; }
+  .solutions-tabs button { min-height: 66px; border-right: 0; border-bottom: 1px solid #d7e1e1; }
+  .solutions-tabs button:last-child { border-bottom: 0; }
+  .solutions-tabs button::after { top: 12px; right: auto; bottom: 12px; left: 0; width: 3px; height: auto; transform: scaleY(0); }
+  .solutions-tabs button.is-active::after { transform: scaleY(1); }
+  .solution-panel__content { padding: 34px 23px; }
+  .solution-panel__visual { min-height: 320px; }
+  .solution-panel__features > div { padding: 22px; }
   .hero__scroll { display: none; }
   .stats__grid { grid-template-columns: 1fr 1fr; }
   .stat:nth-child(2) { border-right: 0; }
