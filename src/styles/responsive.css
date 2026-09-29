@@ -19,6 +19,8 @@
   .process__grid::before { display: none; }
   .contact__grid { grid-template-columns: 1fr; gap: 50px; }
   .calculator__grid, .faq__grid { grid-template-columns: 1fr; gap: 45px; }
+  .calculator__results { grid-template-columns: 1fr 1fr; }
+  .calculator__featured { grid-column: 1 / -1; }
   .faq__grid .section-heading { position: static; }
   .hero__energy-card { display: none; }
   .project-feature { min-height: 620px; }
@@ -63,6 +65,7 @@
   .field-row { grid-template-columns: 1fr; gap: 0; }
   .calculator__panel { padding: 25px 20px; }
   .calculator__results { grid-template-columns: 1fr; }
+  .calculator__featured { grid-column: auto; }
   .about__proof { grid-template-columns: 1fr 1fr 1fr; }
   .contact-form { min-height: auto; padding: 25px 20px; }
   .footer__top { grid-template-columns: 1fr 1fr; }

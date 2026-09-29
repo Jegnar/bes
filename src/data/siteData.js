@@ -41,13 +41,13 @@ export const businessAreas = [
   {
     id: 'electrica', number: '03', icon: CircuitBoard, kicker: 'Ingeniería eléctrica',
     title: 'Infraestructura eléctrica preparada para trabajar con seguridad.',
-    text: 'Diseñamos, ejecutamos y revisamos circuitos e instalaciones eléctricas con énfasis en orden, protección y capacidad. Una base confiable para que hogares, comercios e industria operen y crezcan.',
+    text: 'Analizamos la calidad de la energía de tu sistema eléctrico para diseñar circuitos e instalaciones con resultados a tu medida. Creamos una base confiable para que hogares, comercios e industria operen con seguridad y capacidad de crecimiento.',
     features: [
       { icon: CircuitBoard, title: 'Circuitos y tableros', text: 'Distribución de cargas, canalización y organización profesional.' },
       { icon: ShieldCheck, title: 'Protección y seguridad', text: 'Criterios de protección orientados a personas, equipos e instalación.' },
       { icon: Wrench, title: 'Diagnóstico y servicio', text: 'Revisión, mantenimiento y corrección de fallas o puntos críticos.' },
     ],
-    tags: ['Instalaciones', 'Tableros', 'Mantenimiento'],
+    tags: ['Media tensión', 'Alta tensión', 'Tableros'],
   },
 ];
 
