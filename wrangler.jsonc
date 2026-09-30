@@ -2,8 +2,23 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "bes",
   "compatibility_date": "2026-09-24",
+  "main": "./worker/index.js",
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "single-page-application"
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "CONTACTS_DB",
+      "database_name": "bes-contactos",
+      "database_id": "3ef09c50-e0ce-407f-8496-650e89a93b5d"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "logs": { "enabled": true, "head_sampling_rate": 1 },
+    "traces": { "enabled": true, "head_sampling_rate": 0.01 }
   }
 }

@@ -79,6 +79,9 @@
 .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--blue-500); box-shadow: 0 0 0 3px rgba(21,149,237,.11); }
 .field textarea { resize: vertical; }
 .field small { display: block; margin-top: 5px; color: #c93939; }
+.form-honeypot { position: absolute; overflow: hidden; width: 1px; height: 1px; clip-path: inset(50%); white-space: nowrap; }
+.form-error { margin: 0 0 13px; padding: 10px 12px; border: 1px solid #f0caca; border-radius: 7px; color: #a72d2d; background: #fff4f4; font-size: .78rem; line-height: 1.45; }
+.contact-form .button:disabled { cursor: wait; opacity: .7; transform: none; }
 .form-note { margin: 12px 0 0; color: #8190a0; font-size: .7rem; text-align: center; }
 .form-success { display: grid; place-items: center; min-height: 420px; text-align: center; }
 .form-success > svg { width: 55px; height: 55px; color: var(--blue-600); }
