@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && npx wrangler deploy",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "qr": "node scripts/generate-qr.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -23,6 +24,7 @@
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-react-refresh": "latest",
     "globals": "latest",
+    "qrcode": "^1.5.4",
     "wrangler": "^4.144.0"
   }
 }
