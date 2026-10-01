@@ -24,6 +24,39 @@ const escapeHtml = (value) => value
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&#039;');
 
+const sendWithWeb3Forms = async (env, contact) => {
+  if (!env.WEB3FORMS_ACCESS_KEY) return false;
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        access_key: env.WEB3FORMS_ACCESS_KEY,
+        subject: `Nueva solicitud BES: ${contact.project}`,
+        from_name: 'Sitio web BES',
+        name: contact.name,
+        email: contact.email,
+        phone: contact.phone,
+        project: contact.project,
+        message: contact.message || 'Sin mensaje adicional',
+      }),
+    });
+    const result = await response.json().catch(() => ({}));
+    const sent = response.ok && result.success === true;
+    if (!sent) {
+      console.error(JSON.stringify({ message: 'Web3Forms rejected notification', status: response.status }));
+    }
+    return sent;
+  } catch (error) {
+    console.error(JSON.stringify({ message: 'Web3Forms notification failed', error: error instanceof Error ? error.message : String(error) }));
+    return false;
+  }
+};
+
 const validate = (payload) => {
   const data = {
     name: clean(payload.name, 100),
@@ -43,6 +76,7 @@ const validate = (payload) => {
 };
 
 const sendNotification = async (env, contact) => {
+  if (env.WEB3FORMS_ACCESS_KEY) return sendWithWeb3Forms(env, contact);
   if (!env.RESEND_API_KEY || !env.CONTACT_EMAIL) return false;
 
   const safe = Object.fromEntries(Object.entries(contact).map(([key, value]) => [key, escapeHtml(String(value))]));
